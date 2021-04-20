@@ -1,12 +1,20 @@
-body { margin: 0; background: #f1f1f1; }
 * { box-sizing: border-box; }
 
+body {
+	margin: 0;
+	height: 100vh;
+	background: linear-gradient(to left, blueviolet, violet);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .content {
+	background-color: rgba(255, 255, 255, .4);
 	max-width: 600px;
-	margin: 100px auto;
 	padding: 20px 40px;
 	border-radius: 25px;
-	background: white;
+	border: 1px solid #eee;
 	color: #555;
 	box-shadow: 2px 3px 1rem rgba(0, 0, 0, 0.1);
 }
@@ -47,14 +55,18 @@ body { margin: 0; background: #f1f1f1; }
 	left: 0;
 	width: 100%;
 	height: 100%;
+	justify-content: center;
+	align-items: center;
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
 .modal-content {
-	background: white;
-	max-width: 600px;
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	background: rgba(255, 255, 255, .2);
+	box-shadow: 0 0 .75rem 5px rgba(0, 0, 0, 0.1);
+	flex-basis: 600px;
 	height: 300px;
-	margin: 100px auto;
 	border-radius: 25px;
 	position: relative;
 	animation: scale .6s;

@@ -38,7 +38,7 @@ document.querySelector('form')
 		text.innerHTML = "IMC: " + result.toFixed(2);
 		subText.innerHTML = msg;
 		
-		modal.style.display = "block";
+		modal.style.display = "flex";
 	});
 
 // Fecha o modal
@@ -54,5 +54,5 @@ function clearField() {
 
 // Calcula o IMC
 function imc(weight, height) {
-	return weight / height ** 2;
+	return weight / (height / 100) ** 2;
 }
